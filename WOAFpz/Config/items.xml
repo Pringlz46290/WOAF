@@ -1,0 +1,16 @@
+<configs>
+	<append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
+		<property name="Focused_blockname_6" value="Faucet Small"/>
+		<property name="Focused_blockname_7" value="Faucet"/>
+	</append>
+	
+	<append xpath="/items/item[@name='bucketEmpty']/property[@class='Action1']">
+		<property name="Focused_blockname_6" value="Faucet Small"/>
+		<property name="Focused_blockname_7" value="Faucet"/>
+	</append>
+	
+	<append xpath="/items/item[@name='drinkCanEmpty']/property[@class='Action1']">
+		<property name="Focused_blockname_6" value="Faucet Small"/>
+		<property name="Focused_blockname_7" value="Faucet"/>
+	</append>
+</configs>

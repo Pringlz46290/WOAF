@@ -1,0 +1,66 @@
+<configs>
+	<append xpath="/blocks">
+	
+	<block name="Faucet Small">
+	<property name="Material" value="Mmetal_thin"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<!--<property name="Mesh" value="models"/>-->
+	<property name="Model" value="Entities/Plumbing/faucet04Prefab" />
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Weight" value="16"/>
+	<property name="EconomicValue" value="20"/> <!-- disassemble value -->
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="CustomIcon" value="faucet04"/>
+	<property name="Group" value="Building"/>
+</block>
+
+<block name="Faucet">
+	<property name="Material" value="Mmetal_thin"/>
+	<property name="StabilitySupport" value="false"/> 
+	<property name="Shape" value="ModelEntity"/>
+	<!--<property name="Mesh" value="models"/>-->
+	<property name="Model" value="Entities/Plumbing/faucet02Prefab" />
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Weight" value="24"/>
+	<property name="EconomicValue" value="40"/> <!-- disassemble value -->
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="CustomIcon" value="faucet02" />
+	<property name="Group" value="Building"/>
+</block>
+
+<block name="Wall Oven">
+	<property name="Class" value="Campfire"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Texture" value="346,345,341,345,262,345"/>
+	<property name="IsTerrainDecoration" value="true" />
+	<property name="ParticleName" value="campfire" />
+	<property name="ParticleOffset" value="0.7,0,0.7" />
+	<property name="Stacknumber" value="1" />
+	<property name="HeatMapStrength" value="2"/>
+	<property name="HeatMapTime" value="1200"/>
+	<property name="HeatMapFrequency" value="25"/>
+	<property name="BuffsWhenWalkedOn" value="blockBurn3Trigger"/>
+	<property name="ActiveRadiusEffects" value="+heatSource(3)"/>
+	<property class="Workstation">
+	<property name="CraftingAreaRecipes" value="campfire"/>
+	<property name="Modules" value="tools,output,fuel,input"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket" />
+	</property>
+	<property class="RepairItems"> 
+		<property name="mechanicalParts" value="1" /> 
+		<property name="scrapIron" value="5" />
+	</property>
+	<drop event="Harvest" name="mechanicalParts" count="0,1" tool_category="Disassemble"/>
+	<drop event="Harvest" name="shortMetalPipe" count="1,2" tool_category="Disassemble"/>
+	<drop event="Destroy" name="scrapIron" count="5,10" prob="1"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Food/Cooking" />
+	<property name="SellableToTrader" value="false" />
+	<property name="CustomIcon" value="cntWallOven" />
+</block>
+
+
+
+	</append>
+</configs>
